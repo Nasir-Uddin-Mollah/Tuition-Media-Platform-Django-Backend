@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-ne@7$1$pjv_=x@+6ogs%pn84w*4j%^hid!zdc#h9@$12gtda$@
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS = ['https://tuition-lagbe.onrender.com', 'https://*.127.0.0.1']
 
 # Application definition
 
