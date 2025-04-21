@@ -29,7 +29,15 @@ SECRET_KEY = 'django-insecure-ne@7$1$pjv_=x@+6ogs%pn84w*4j%^hid!zdc#h9@$12gtda$@
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://tuition-lagbe.onrender.com', 'https://*.127.0.0.1']
+# CSRF_TRUSTED_ORIGINS = ['https://tuition-lagbe.onrender.com', 'https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS=True
+
+CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOWED_ORIGINS = [
+#     "http://127.0.0.1:5501",  # Frontend URL
+# ]
+CSRF_TRUSTED_ORIGINS = ['https://tuition-lagbe.onrender.com','https://*.127.0.0.1','http://127.0.0.1:5501',]
+
 
 # Application definition
 
