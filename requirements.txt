@@ -39,3 +39,4 @@ tzdata
 uvicorn
 virtualenv
 whitenoise
+django-cors-headers
