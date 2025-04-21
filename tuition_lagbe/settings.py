@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 # CSRF_TRUSTED_ORIGINS = ['https://tuition-lagbe.onrender.com', 'https://*.127.0.0.1']
-CSRF_TRUSTED_ORIGINS=True
+CORS_TRUSTED_ORIGINS=True
 
 CORS_ALLOW_CREDENTIALS = True
 # CORS_ALLOWED_ORIGINS = [
