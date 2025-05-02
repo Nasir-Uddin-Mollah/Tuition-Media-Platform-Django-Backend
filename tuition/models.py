@@ -13,10 +13,10 @@ class Class(models.Model):
 
 class Tuition(models.Model):
     title = models.CharField(max_length=100)
-    subjuct = models.CharField(max_length=100)
+    subject = models.CharField(max_length=100)
     class_name = models.ForeignKey(Class, on_delete=models.CASCADE)
     description = models.TextField()
     is_available = models.BooleanField(default=True)
 
     def __str__(self):
-        return f'{self.class_name} - {self.subjuct}'
+        return f'{self.class_name} - {self.subject}'

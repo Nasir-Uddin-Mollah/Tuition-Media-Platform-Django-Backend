@@ -11,8 +11,8 @@ admin.site.register(models.Class, ClassAdmin)
 
 
 class TuitionAdmin(admin.ModelAdmin):
-    list_display = ['title', 'subjuct', 'class_name', 'is_available']
-    search_fields = ['title', 'subjuct', 'class_name']
+    list_display = ['title', 'subject', 'class_name', 'is_available']
+    search_fields = ['title', 'subject', 'class_name']
     list_per_page = 10
 
 
