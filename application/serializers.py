@@ -5,11 +5,22 @@ from tuition.models import Tuition
 
 
 class ApplicationSerializer(serializers.ModelSerializer):
-    tuition = serializers.StringRelatedField(many=False)
+    tuition_details = serializers.SerializerMethodField()
 
     class Meta:
         model = models.Application
         fields = '__all__'
+
+    def get_tuition_details(self, obj):
+        tuition = obj.tuition
+        return {
+            "id": tuition.id,
+            "title": tuition.title,
+            "subject": tuition.subject,
+            "class_name": tuition.class_name.name,
+            "description": tuition.description,
+            "is_available": tuition.is_available,
+        }
 
 
 class ReviewSerializer(serializers.ModelSerializer):
