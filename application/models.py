@@ -17,6 +17,13 @@ class Application(models.Model):
     status = models.CharField(max_length=20, choices=CHOICES, default='pending')
     applied_on = models.DateTimeField(auto_now_add=True)
 
+    def save(self, *args, **kwargs):
+        if self.status == 'accepted':
+            self.tuition.is_available= False
+            self.tuition.save()
+            Application.objects.filter(tuition=self.tuition).exclude(id=self.id).update(status='rejected')
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return f"{self.user.username} - {self.tuition.class_name.name} - {self.tuition.subject}"
 
