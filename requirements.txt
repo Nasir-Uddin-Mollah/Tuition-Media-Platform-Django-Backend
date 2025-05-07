@@ -6,7 +6,9 @@ crispy-bootstrap5
 distlib
 dj-database-url
 Django
+django-cors-headers
 django-crispy-forms
+django-csp
 django-environ
 django-filter
 djangorestframework
@@ -39,4 +41,3 @@ tzdata
 uvicorn
 virtualenv
 whitenoise
-django-cors-headers
