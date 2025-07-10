@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'tuition_lagbe.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://tuitionlagbe_wrwi_user:iWbQFcBTbGwnbvi39HrtlZvg7Prq7JCW@dpg-d12isfk9c44c738bsggg-a.oregon-postgres.render.com/tuitionlagbe_wrwi',
+        default=env("DATABASE_URL"),
     )
 }
 
